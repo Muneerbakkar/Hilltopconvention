@@ -43,6 +43,10 @@ const transporter = nodemailer.createTransport({
 
 // Routes
 
+app.get("/", async (req, res) => {
+  res.send("Express on Vercel");
+});
+
 // Send email route
 app.post("/send-email", async (req, res) => {
   const { subject, text } = req.body;
